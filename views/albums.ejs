@@ -35,19 +35,19 @@
                             Albums
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Gish</a></li>
-                            <li><a class="dropdown-item" href="#">Siamese Dream</a></li>
-                            <li><a class="dropdown-item" href="#">Mellon Collie and the Infinite Sadness</a></li>
-                            <li><a class="dropdown-item" href="#">Adore</a></li>
-                            <li><a class="dropdown-item" href="#">Machina/The Machines of God</a></li>
-                            <li><a class="dropdown-item" href="#">Machina II/The Friends & Enemies of Modern Music</a></li>
-                            <li><a class="dropdown-item" href="#">Zeitgeist</a></li>
-                            <li><a class="dropdown-item" href="#">Oceania</a></li>
-                            <li><a class="dropdown-item" href="#">Monuments to an Elegy</a></li>
-                            <li><a class="dropdown-item" href="#">Shiny and Oh So Bright, Vol.1/LP: No Past. No Future. No Sun.</a></li>
-                            <li><a class="dropdown-item" href="#">Cyr</a></li>
+                            <li><a class="dropdown-item" href="/albums/gish">Gish</a></li>
+                            <li><a class="dropdown-item" href="/albums/siamese_dream">Siamese Dream</a></li>
+                            <li><a class="dropdown-item" href="/albums/mellon_collie">Mellon Collie and the Infinite Sadness</a></li>
+                            <li><a class="dropdown-item" href="/albums/adore">Adore</a></li>
+                            <li><a class="dropdown-item" href="/albums/machinaI">Machina/The Machines of God</a></li>
+                            <li><a class="dropdown-item" href="/albums/machinaII">Machina II/The Friends & Enemies of Modern Music</a></li>
+                            <li><a class="dropdown-item" href="/albums/zeitgeist">Zeitgeist</a></li>
+                            <li><a class="dropdown-item" href="/albums/oceania">Oceania</a></li>
+                            <li><a class="dropdown-item" href="/albums/monuments">Monuments to an Elegy</a></li>
+                            <li><a class="dropdown-item" href="/albums/shiny">Shiny and Oh So Bright, Vol.1/LP: No Past. No Future. No Sun.</a></li>
+                            <li><a class="dropdown-item" href="/albums/cyr">Cyr</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" aria-current="page" href="/albums">All Albums</a></li>
+                            <li><a class="dropdown-item" href="/albums">All Albums</a></li>
                         </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -69,19 +69,21 @@
                     <div class="row">
                         <div class="col-12 col-lg-10 offset-lg-1">
                             <article class="albumsList">
-                                <% albums.forEach(albumObj => { %>
-                                    <div class="albumDescriptions">
-                                        <h5 class="albumlist-name band-font"><a href="/albums/<%= albumObj.shortname %> "><%= albumObj.albumname %></a></h5>
-                                        <div class="container-fluid row m-0">
-                                            <a class="col-12 col-md-4" href="/albums/<%= albumObj.shortname %> ">
-                                                <img class="albumlist-img mb-lg-5"
-                                                    src="<%= albumObj.artwork[0] %> "
-                                                    alt="Photo of <%= albumObj.albumname %> "></a>
-                                            <p class="col-12 col-md-8 albumslist-info mb-lg-5 text-light">
-                                                <%= albumObj.summary %> 
-                                            </p>
-                                        </div>
-                                <% }) %>
+                                <% if (albums.length > 1) { %> 
+                                    <% albums.forEach(albumObj => { %>
+                                        <div class="albumDescriptions">
+                                            <h5 class="albumlist-name band-font"><a href="/albums/<%= albumObj.shortname %> "><%= albumObj.albumname %></a></h5>
+                                            <div class="container-fluid row m-0">
+                                                <a class="col-12 col-md-4" href="/albums/<%= albumObj.shortname %> ">
+                                                    <img class="albumlist-img mb-lg-5"
+                                                        src="<%= albumObj.artwork[0] %> "
+                                                        alt="Photo of <%= albumObj.albumname %> "></a>
+                                                <p class="col-12 col-md-8 albumslist-info mb-lg-5 text-light">
+                                                    <%= albumObj.summary %> 
+                                                </p>
+                                            </div>
+                                    <% }) %>
+                                    <% } %>
                                     </div>
                             </article>
                         <!-- </div> -->
