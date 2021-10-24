@@ -30,7 +30,7 @@
                         <a class="nav-link" href="#">Link</a>
                         </li> -->
                         <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Albums
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -59,7 +59,7 @@
                         </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/forum">Form</a>
+                            <a class="nav-link active" href="/forum">Form</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/chat">Chat</a>
@@ -72,58 +72,27 @@
             <body>
                 <div class="container pt-5">
                     <div class="row">
-                        <div class="col-12 col-lg-10 offset-lg-1">
-                            <article class="albumsList">
-                                <!-- all albums listed on page -->
-                                <% if (albums.length > 1) { %> 
-                                    <% albums.forEach(albumObj => { %>
-                                        <div class="albumDescriptions">
-                                            <h5 class="albumlist-name band-font"><a href="/albums/<%= albumObj.shortname %> "><%= albumObj.albumname %></a></h5>
-                                            <div class="container-fluid row m-0">
-                                                <a class="col-12 col-md-4" href="/albums/<%= albumObj.shortname %> ">
-                                                    <img class="albumlist-img mb-lg-5"
-                                                        src="<%= albumObj.artwork[0] %> "
-                                                        alt="Photo of <%= albumObj.albumname %> album cover"></a>
-                                                <p class="col-12 col-md-8 mt-5 mt-md-0 albumslist-info mb-lg-5 text-light">
-                                                    <%= albumObj.summary %> 
-                                                </p>
-                                            </div>
-                                    <% }) %>
-                                    <% } else {%>
-                                    <!-- single album -->
-                                    <% albums.forEach(albumObj => { %>
-                                        <div class="albumDescriptions">
-                                            <h5 class="albumlist-name band-font"><a href="/albums/<%= albumObj.shortname %> "><%= albumObj.albumname %></a></h5>
-                                            <div class="container-fluid row m-0">
-                                                <a class="col-12 col-md-4" href="/albums/<%= albumObj.shortname %> ">
-                                                    <img class="albumlist-img mb-lg-5"
-                                                        src="/<%= images[0] %> "
-                                                        alt="Photo of <%= albumObj.albumname %> album cover."></a>
-                                                <p class="col-12 col-md-8 mt-5 mt-md-0 albumslist-info mb-lg-5 text-light">
-                                                    <%= albumObj.summary %> 
-                                                </p>
-                                            </div>
-                                            <div class="container-fluid row m-0">
-                                                <div class="col-12 col-md-4">
-                                                    <h3 class="text-light band-font">Tracks</h3>
-                                                    <ol class="text-light">
-                                                        <% tracks.forEach(track => { %>
-                                                        <li><%= track %> </li>
-                                                        <% }) %>
-                                                    </ol>
-                                                </div>
-                                                <div class="col-12 col-md-8 ">
-                                                    <h3 class="band-font text-light">Listen</h3>
-                                                    <a href="<%= albums[0].albumAM %>" target="_blank"><img src="/images/apple_music_logo.png" alt="Apple Music logo" class="apple-music-link-img"></a> 
-                                                    <a href="<%= albums[0].albumSM %>" target="_blank"><img src="/images/spotify-badge-button.png" alt="Apple Music logo" class="spotify-music-link-img"></a> 
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    <% }) %>
-                                    <% } %> 
-                            </article>
-                        <!-- </div> -->
+                        <div class="col-12 col-lg-10 offset-lg-1 row">
+                            <div class="col-12 col-sm-4">
+                                <h2>Leave us a message</h2>
+                                <form class="feedback-form">
+                                    <div class="mb-3">
+                                        <label for="feedback-form-name" class="form-label">Email address</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                                      <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </body>
@@ -135,6 +104,6 @@
     <!-- Bootstrap JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b5578a43de.js" crossorigin="anonymous"></script>
-
+<script src="/js/forumClient.js"></script>
 </body>
 </html>
