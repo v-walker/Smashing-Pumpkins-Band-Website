@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
 
 // listen for click on message span tag; get id; make fetch call
 forumContainer.addEventListener('click', async (e) => {    
-    if (e.target.nodeName === 'SPAN') {
+    if (e.target.nodeName === 'I') {
         let messageID = e.target.id;
         let results = await fetch('/api', {
             method: "DELETE",
@@ -54,10 +54,10 @@ const updateforum = (data) => {
 
         htmlBlock += '     <div class="forum-item item-list media-list">';
         htmlBlock += '       <div class="forum-item media">';
-        htmlBlock += '       <div class="media-left"><button class="forum-delete btn btn-xs btn-danger"><span id="' + key + '" class="glyphicon glyphicon-remove"></span></button></div>';
+        htmlBlock += '       <div class="text-left"><button class="forum-delete btn btn-xs btn-danger"><i id="'+ key +'" class="fas fa-trash-alt"></i></button></div>';
         htmlBlock += '         <div class="forum-info media-body">';
         htmlBlock += '           <div class="forum-head">';
-        htmlBlock += '             <div class="forum-title">' + item.title + ' <small class="forum-name label label-info">' + item.name + '</small></div>';
+        htmlBlock += '             <div class="forum-title text-light">' + item.title + ' <small class="forum-name label label-info">' + item.name + '</small></div>';
         htmlBlock += '           </div>';
         htmlBlock += '           <div class="forum-message">' + item.message + '</div>';
         htmlBlock += '         </div>'; 
