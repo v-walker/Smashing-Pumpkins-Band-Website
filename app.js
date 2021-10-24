@@ -13,4 +13,4 @@ app.use(require('./routes/albums'));
 
 app.listen(port, () => {
     console.log(`Listening on port: ${port}`);
-})
+});

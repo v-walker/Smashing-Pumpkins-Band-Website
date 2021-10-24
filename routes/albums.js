@@ -24,19 +24,25 @@ router.get('/albums/:albumid', (req, res) => {
     // only 1 album
 
     let album = req.params.albumid;
-    let albumArray = []
+    let albumArray = [];
+    let images = [];
+    let tracks = [];
     
     albums.forEach(albumObj => {
         if (albumObj.shortname === album) {
             // need to finish this part
-            // albumArray.push....
+            albumArray.push(albumObj);
+            images = [...albumObj.artwork];
+            tracks = [...albumObj.tracklist];
         }
     });
-
-    res.render('albums/:albumid', {
+    
+    res.render('albums', {
         pageTitle: albumArray[0].name,
         albums: albumArray,
-    })
+        images: images,
+        tracks: tracks
+    });
 });
 
 module.exports = router;
