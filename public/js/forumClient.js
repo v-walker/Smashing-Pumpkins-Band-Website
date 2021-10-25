@@ -59,7 +59,7 @@ const updateforum = (data) => {
         htmlBlock += '           <div class="forum-head">';
         htmlBlock += '             <div class="forum-title">' + item.title + ' <small class="forum-name label label-info">' + '-' + item.name + '</small></div>';
         htmlBlock += '           </div>';
-        htmlBlock += '           <div class="forum-message">' + item.message + '</div>';
+        htmlBlock += '           <div class="forum-message"><i>' + item.message + '</i></div>';
         htmlBlock += '         </div>'; 
         htmlBlock += '       </div>';
         htmlBlock += '     </div>';
