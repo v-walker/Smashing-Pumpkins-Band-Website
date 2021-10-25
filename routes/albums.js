@@ -14,7 +14,7 @@ router.get('/albums', (req, res) => {
     });
 
     res.render('albums', {
-        pageTitle: "Albums",
+        pageTitle: "Albums | The Smashing Pumpkins",
         albums: albums,
         artwork: albumPhotos
     });
@@ -38,7 +38,7 @@ router.get('/albums/:albumid', (req, res) => {
     });
     
     res.render('albums', {
-        pageTitle: albumArray[0].name,
+        pageTitle: `${albumArray[0].name} | The Smashing Pumpkins`,
         albums: albumArray,
         images: images,
         tracks: tracks

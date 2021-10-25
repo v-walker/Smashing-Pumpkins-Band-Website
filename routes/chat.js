@@ -4,8 +4,9 @@ const router = express.Router();
 router.get('/chat', (req, res) => {
 
     res.render('chat', {
-        pageTitle: "The Smashing Pumpkins | Chat"
-    })
+        pageTitle: "Chat | The Smashing Pumpkins",
+        pageID: "chat"
+    });
 });
 
 module.exports = router;
