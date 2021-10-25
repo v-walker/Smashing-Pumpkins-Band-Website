@@ -52,17 +52,18 @@ const updateforum = (data) => {
     let htmlBlock = "";
     data.forEach((item, key) => {
 
-        htmlBlock += '     <div class="forum-item item-list media-list">';
-        htmlBlock += '       <div class="forum-item media">';
-        htmlBlock += '       <div class="text-left"><button class="forum-delete btn btn-xs btn-danger"><i id="'+ key +'" class="fas fa-trash-alt"></i></button></div>';
-        htmlBlock += '         <div class="forum-info media-body">';
+        htmlBlock += '     <div class="forum-item item-list container-fluid m-0 p-0">';
+        htmlBlock += '       <div class="forum-item row">';
+        htmlBlock += '       <div class="text-left col-1"><button class="forum-delete btn btn-xs btn-danger"><i id="'+ key +'" class="fas fa-trash-alt"></i></button></div>';
+        htmlBlock += '          <div class="forum-info col-10 offset-1">';
         htmlBlock += '           <div class="forum-head">';
-        htmlBlock += '             <div class="forum-title text-light">' + item.title + ' <small class="forum-name label label-info">' + item.name + '</small></div>';
+        htmlBlock += '             <div class="forum-title">' + item.title + ' <small class="forum-name label label-info">' + '-' + item.name + '</small></div>';
         htmlBlock += '           </div>';
         htmlBlock += '           <div class="forum-message">' + item.message + '</div>';
         htmlBlock += '         </div>'; 
         htmlBlock += '       </div>';
         htmlBlock += '     </div>';
+        htmlBlock += '     <hr>';
     });
     
     //attach to a dom element

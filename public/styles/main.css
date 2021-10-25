@@ -1,12 +1,22 @@
 body {
-    margin: 0 auto;
+    margin: 0;
     background-color: black;
+    font-family:Arial, Helvetica, sans-serif
+
 }
 
+/* @font-face {
+    font-family: 'lansburyregular';
+    src: url('./fonts/webfontkit-20211021-113438/lansbury-webfont.woff2') format('woff2'),
+    url('./fonts/webfontkit-20211021-113438/lansbury-webfont.woff') format('woff'),
+    url('./fonts/LANSBURY.ttf');
+    font-weight: normal;
+    font-style: normal;      
+} */
+
 .band-font {
-    /* font-family: 'Over the Rainbow', cursive; */
-    /* font-family: 'Artifika', serif; */
-    font-family: 'lansburyregular', serif;
+    /* font-family: 'lansburyregular', serif; */
+    font-family: 'Cinzel Decorative', cursive;
 
 }
 
@@ -28,6 +38,41 @@ body {
 }
 .spotify-music-link-img {
     width: 150px;
+}
+
+.section-title {
+    color: #ee9f04;
+}
+
+.forum-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #5a00c1;
+}
+
+.forum-name {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: white;
+}
+
+.forum-delete {
+    font-size: 0.8rem;
+}
+
+.txt-purple {
+    color: #5a00c1;
+}
+
+.btn-primary {
+    background-color: #5a00c1;
+    border: 2px solid #4b01a0;
+}
+
+.btn-primary:hover {
+    background-color: #6e04e6;
+    border: 2px solid #4b01a0;
 }
 
 @media only screen and (max-width: 576px) {

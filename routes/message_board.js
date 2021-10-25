@@ -11,8 +11,8 @@ const fs = require('fs');
 let forumData = require('../data/forum.json'); // is converted to json object
 // data structure: [{name: , title: , message: ,}, {}, {}]
 
-router.get('/forum', (req, res) => {
-    res.render('forum')
+router.get('/message_board', (req, res) => {
+    res.render('message_board')
 });
 
 router.get('/api', (req, res) => {
