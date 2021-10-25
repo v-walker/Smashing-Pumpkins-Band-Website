@@ -20,8 +20,16 @@ body {
 
 }
 
-.header-img {
+.index-img-div {
+    width: 100%;
+    margin: 0px;
+    height: 575px;
+    overflow: hidden;
+}
+
+.index-img {
     width: 100vw;
+    margin: 0px;
 }
 
 .albumlist-name {
@@ -73,6 +81,24 @@ body {
 .btn-primary:hover {
     background-color: #6e04e6;
     border: 2px solid #4b01a0;
+}
+
+.footer-text {
+    font-size: 0.7rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footer-link:hover {
+    color: #5a00c1;
+}
+
+.under-construction {
+    font-size: 4rem;
+    color: #ee9f04;
 }
 
 @media only screen and (max-width: 576px) {

@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 app.use(require('./routes/index'));
 app.use(require('./routes/albums'));
 app.use(require('./routes/message_board'));
+app.use(require('./routes/chat'));
 
 app.listen(port, () => {
     console.log(`Listening on port: ${port}`);
