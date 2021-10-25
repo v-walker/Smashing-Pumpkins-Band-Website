@@ -14,6 +14,10 @@ body {
     font-style: normal;      
 } */
 
+.navbar-dark {
+    opacity: 90%;
+}
+
 .band-font {
     /* font-family: 'lansburyregular', serif; */
     font-family: 'Cinzel Decorative', cursive;
