@@ -45,11 +45,27 @@ body {
     color: #ee9f04;
 }
 
+.albumlist-name a:hover {
+    color: whitesmoke;
+}
+
+a .albumlist-img:hover {
+    box-shadow: 0px 0px 10px 1.5px rgba(90, 0, 193, 0.7);
+}
+
 .apple-music-link-img {
     width: 150px;
 }
+
+a .apple-music-link-img:hover {
+    box-shadow: 0px 0px 10px 1.5px rgba(90, 0, 193, 0.7);
+}
 .spotify-music-link-img {
     width: 150px;
+}
+
+a .spotify-music-link-img:hover {
+    box-shadow: 0px 0px 10px 1.5px rgba(90, 0, 193, 0.7);
 }
 
 .section-title {
