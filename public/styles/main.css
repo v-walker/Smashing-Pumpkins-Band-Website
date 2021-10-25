@@ -27,7 +27,7 @@ body {
 .index-img-div {
     width: 100%;
     margin: 0px;
-    height: 575px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -105,10 +105,17 @@ body {
     color: #ee9f04;
 }
 
+.construction-img {
+    width: 50%;
+}
+
 @media only screen and (max-width: 576px) {
     .albumlist-img {
         display: inline-block;
         margin: 0 auto;
+    }
+    .under-construction {
+        font-size: 2rem;
     }
 }
 
@@ -121,5 +128,19 @@ body {
 @media only screen and (min-width: 769px) {
     .albumlist-img {
         width: 100%;
+    }
+}
+
+
+@media only screen and (min-height: 900px) {
+    .index-img-div {
+        height: 800px;
+        overflow: hidden;
+    }
+}
+@media only screen and (min-height: 1800px) {
+    .index-img-div {
+        height: 1400px;
+        overflow: hidden;
     }
 }
