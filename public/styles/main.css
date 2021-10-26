@@ -162,6 +162,12 @@ a .spotify-music-link-img:hover {
     }
 }
 
+@media only screen and (min-width: 1440px) {
+    .panel {
+        height: 475px;
+    }
+}
+
 @media only screen and (min-height: 900px) {
     .index-img-div {
         height: 800px;
