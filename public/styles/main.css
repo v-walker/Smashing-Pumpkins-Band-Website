@@ -93,6 +93,10 @@ a .spotify-music-link-img:hover {
     color: #5a00c1;
 }
 
+.txt-white-smoke {
+    color: whitesmoke;
+}
+
 .btn-primary {
     background-color: #5a00c1;
     border: 2px solid #4b01a0;
@@ -125,6 +129,14 @@ a .spotify-music-link-img:hover {
     width: 50%;
 }
 
+.panel {
+    height: 300px;
+    background-color: whitesmoke;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
 @media only screen and (max-width: 576px) {
     .albumlist-img {
         display: inline-block;
@@ -139,6 +151,9 @@ a .spotify-music-link-img:hover {
     .albumlist-img {
         width: 90%;
     }
+    .under-construction {
+        font-size: 2.5rem;
+    }
 }
 
 @media only screen and (min-width: 769px) {
@@ -146,7 +161,6 @@ a .spotify-music-link-img:hover {
         width: 100%;
     }
 }
-
 
 @media only screen and (min-height: 900px) {
     .index-img-div {
