@@ -152,8 +152,19 @@ a .spotify-music-link-img:hover {
     height: 300px;
     background-color: whitesmoke;
     padding: 10px;
-    overflow: hidden;
+    overflow-y: scroll;
     border-radius: 5px;
+}
+
+.panel::-webkit-scrollbar {
+    width: 8px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.panel::-webkit-scrollbar-thumb {
+    background-color: #5a00c1b6;
+    border-radius: 4px;
 }
 
 .chat-text {
