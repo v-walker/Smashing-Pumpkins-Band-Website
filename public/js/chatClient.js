@@ -21,7 +21,7 @@ socket.on('updateMessage', (data) => {
 
     newMessage.innerHTML = `<strong>${data.username}</strong>: ${data.message}`;
     chatDisplay.insertBefore(newMessage, chatDisplay.firstChild);
-
+    chatMessage.value = "";
 });
 
 // send message to server
