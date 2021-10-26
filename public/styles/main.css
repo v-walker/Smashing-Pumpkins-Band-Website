@@ -15,7 +15,7 @@ body {
 } */
 
 .navbar-dark {
-    opacity: 90%;
+    opacity: 85%;
 }
 
 .band-font {
@@ -105,6 +105,7 @@ a .spotify-music-link-img:hover {
 .btn-primary:hover {
     background-color: #6e04e6;
     border: 2px solid #4b01a0;
+    box-shadow:0px 0px 10px 1.5px rgba(90, 0, 193, 0.7);
 }
 
 .footer-text {
@@ -129,12 +130,29 @@ a .spotify-music-link-img:hover {
     width: 50%;
 }
 
+.bg-whitesmoke {
+    background-color: whitesmoke;
+}
+
 .panel {
     height: 300px;
     background-color: whitesmoke;
-    padding: 5px;
+    padding: 10px;
     overflow: hidden;
     border-radius: 5px;
+}
+
+.chat-text {
+    color: 222222;
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1;
+    padding: 3px, 0px;
+    margin: 4px;
+}
+
+.response-text {
+    color: #5a00c1;
 }
 
 @media only screen and (max-width: 576px) {

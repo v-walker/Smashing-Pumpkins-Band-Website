@@ -13,10 +13,10 @@ socket.on('updateMessage', (data) => {
     let newMessage = document.createElement('p');
 
     if (chatUserName.value === data.username) {
-        newMessage.className = "bg-success chat-text";
+        newMessage.className = "chat-text";
     }
     else {
-        newMessage.className = "bg-info text-warning chat-text";
+        newMessage.className = "response-text chat-text";
     }
 
     newMessage.innerHTML = `<strong>${data.username}</strong>: ${data.message}`;
