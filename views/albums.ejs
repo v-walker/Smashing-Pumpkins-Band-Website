@@ -112,11 +112,14 @@
                                                     <% }) %>
                                                 </ol>
                                             </div>
+                                            <% if (albumObj.albumAM !== "") {%>
+
                                             <div class="col-12 col-md-8 ">
                                                 <h3 class="band-font section-title">Listen</h3>
                                                 <a href="<%= albums[0].albumAM %>" target="_blank"><img src="/images/apple_music_logo.png" alt="Apple Music logo" class="apple-music-link-img"></a> 
                                                 <a href="<%= albums[0].albumSM %>" target="_blank"><img src="/images/spotify-badge-button.png" alt="Apple Music logo" class="spotify-music-link-img"></a> 
                                             </div>
+                                            <% } %> 
                                             
                                         </div>
                                     </div>
@@ -125,7 +128,7 @@
                         </article>
                     </div> <!-- closes albums div -->
                     <div class="col-12 col-lg-10 offset-lg-1">
-                        <p class="text-center sub-text">Read more about these albums on 
+                        <p class="text-center sub-text pt-5">Read more about these albums on 
                             <a href="https://en.wikipedia.org/wiki/The_Smashing_Pumpkins_discography" target="_blank">Wikipedia</a>
                         </p>
                     </div>
