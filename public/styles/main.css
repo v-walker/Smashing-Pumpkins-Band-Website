@@ -180,14 +180,14 @@ a .spotify-music-link-img:hover {
     color: #5a00c1;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (min-width: 200px) {
     .index-img-div {
         height: 200px;
         overflow: hidden;
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 574px) {
     .index-img-div {
         height: 350px;
         overflow: hidden;
@@ -202,7 +202,7 @@ a .spotify-music-link-img:hover {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 766px) {
     .index-img-div {
         height: 400px;
         overflow: hidden;
@@ -216,20 +216,25 @@ a .spotify-music-link-img:hover {
     }
 }
 
-@media only screen and (max-width: 1025px) {
-    .index-img-div {
-        height: 400px;
-        overflow: hidden;
-    }
-}
-
 @media only screen and (min-width: 769px) {
     .albumlist-img {
         width: 100%;
     }
 }
 
+@media only screen and (min-width: 1023px) {
+    .index-img-div {
+        height: 600px;
+        overflow: hidden;
+    }
+}
+
 @media only screen and (min-width: 1440px) {
+    .index-img-div {
+        height: 700px;
+        overflow: hidden;
+    }
+    
     .panel {
         height: 475px;
     }
